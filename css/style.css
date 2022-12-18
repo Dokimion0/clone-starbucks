@@ -14,7 +14,7 @@ body {
   font-weight: 400px;
   font-size: 16px;
   line-height: 1.4;
-  font-family: "Nanum Gothic", sans-serif;
+  font-family: 'Nanum Gothic', sans-serif;
 }
 
 img {
@@ -57,17 +57,18 @@ header .util {
   display: flex;
 }
 
-header .util ul {
+header .util > ul {
   font-family: Arial, sans-serif;
   display: flex;
 }
 
-header .util ul li {
+header .util > ul li {
   position: relative;
+  cursor: pointer;
 }
 
-header .util ul li::before {
-  content: "";
+header .util > ul li::before {
+  content: '';
   width: 1px;
   height: 12px;
   background: #555;
@@ -77,23 +78,24 @@ header .util ul li::before {
   margin: auto;
 }
 
-header .util ul li:first-child::before {
+header .util ul > li:first-child::before {
   display: none;
 }
 
-header .util ul li a {
+header .util ul > li a {
   font-size: 12px;
   padding: 11px 16px;
   display: block;
   color: #555;
 }
 
-header .util ul li a:hover {
+header .util ul > li a:hover {
   text-decoration: underline;
 }
 
 header .util .search {
   position: relative;
+  cursor: pointer;
 }
 
 header .util .search input {
@@ -119,7 +121,7 @@ header .util .search span {
   height: 24px;
 }
 
-header .menu ul {
+header .menu {
   display: flex;
   position: absolute;
   bottom: 0;
@@ -139,25 +141,48 @@ header .menu .item:hover .item__name {
   font-size: 13px;
   background-color: #2c2c2c;
   color: #669900;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 header .menu .item .item__contents {
   width: 100%;
   position: fixed;
   left: 0;
-  display: none;
+  visibility: hidden;
+  transition: height 0.5s;
 }
 
 header .menu .item:hover .item__contents {
-  display: block;
+  visibility: visible;
 }
+
+/* .act {
+  visibility: visible;
+  height: 60vh;
+} */
 
 header .menu .item .item__contents .contents__menu {
   background-color: #2c2c2c;
   color: #fff;
-  height: 200px;
 }
 
-header .menu .item .item__contents .contents__menu li {
-  font-size: 12px;
+header .menu .item .item__contents .contents__menu > ul {
+  display: flex;
+  padding: 20px 0;
+}
+
+header .menu .item .item__contents .contents__menu > ul > li {
+  width: 220px;
+  cursor: pointer;
+}
+header .menu .item .item__contents .contents__menu > ul > li h4 {
+  padding: 3px 0 12px 0;
+  font-size: 14px;
+}
+
+header .menu .item .item__contents .contents__menu > ul > li ul li {
+  padding: 5px 0;
+  color: #999;
+  font-size: var(--font-size-small);
 }
