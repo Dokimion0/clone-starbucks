@@ -4,6 +4,7 @@
 
   /* Font Size*/
   --font-size-small: 12px;
+  --font-size-normal: 16px;
 
   /* Font Color */
   --font-color: #333;
@@ -12,13 +13,14 @@
 body {
   color: var(--black-color);
   font-weight: 400px;
-  font-size: 16px;
+  font-size: var(--font-size-normal);
   line-height: 1.4;
   font-family: 'Nanum Gothic', sans-serif;
 }
 
 img {
   display: block;
+  width: 100%;
 }
 
 a {
@@ -34,7 +36,11 @@ a {
 /* HEADER */
 
 header {
+  width: 100%;
   background-color: #f6f5ef;
+  position: fixed;
+  top: 0;
+  z-index: 99;
 }
 
 header > .inner {
@@ -126,7 +132,6 @@ header .menu {
   position: absolute;
   bottom: 0;
   right: 0;
-  z-index: 1;
 }
 
 header .menu .item .item__name {
@@ -181,8 +186,103 @@ header .menu .item .item__contents .contents__menu > ul > li h4 {
   font-size: 14px;
 }
 
+header .menu .item .item__contents .contents__menu > ul > li h4 {
+  text-decoration: underline;
+}
+
 header .menu .item .item__contents .contents__menu > ul > li ul li {
   padding: 5px 0;
   color: #999;
   font-size: var(--font-size-small);
+}
+
+header .menu .item .item__contents .contents__menu > ul > li ul li:hover {
+  text-decoration: underline;
+}
+
+header .badge {
+  position: absolute;
+  right: 12px;
+  top: 140px;
+  cursor: pointer;
+}
+
+/* VISUAL */
+.visual {
+  margin-top: 120px;
+  height: 34vw;
+  background-image: url(../images/Chrismas_bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.visual .inner {
+  height: 100%;
+  width: 100%;
+}
+
+.visual .visual__slogan {
+  position: absolute;
+  width: 26%;
+  left: 10%;
+  top: 34%;
+}
+
+.visual .visual__image {
+  height: 100%;
+}
+
+.visual .visual__image .cup1 {
+  position: absolute;
+  z-index: 9;
+  top: 34.5%;
+  left: 41.5%;
+  width: 22%;
+}
+
+.visual .visual__image .cup2 {
+  position: absolute;
+  z-index: 9;
+  top: 34.5%;
+  right: 19.2%;
+  width: 18%;
+}
+
+.visual .visual__image .cup3 {
+  position: absolute;
+  z-index: 8;
+  top: 15.1%;
+  left: 42%;
+  width: 19%;
+}
+
+.visual .visual__image .cup4 {
+  position: absolute;
+  z-index: 8;
+  top: 18%;
+  right: 9.4%;
+  width: 21%;
+}
+
+.visual .btn__slogan {
+  position: absolute;
+  width: 26%;
+  left: 10%;
+  top: 63.4%;
+}
+
+.btn__slogan a {
+  width: 28%;
+
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 15px;
+  line-height: 34px;
+  display: block;
+  margin: 0 auto;
+  
 }
