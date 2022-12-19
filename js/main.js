@@ -3,6 +3,11 @@ console.log('js');
 const searchEl = document.querySelector('.search');
 const searchInputEl = searchEl.querySelector('input');
 const searchIconEl = searchEl.querySelector('span');
+
+const itemEl = document.querySelector('.item');
+const itemNameEl = itemEl.querySelector('.item__name');
+const itemContentsEl = itemEl.querySelector('.item__contents');
+
 let buttonClick = false;
 
 searchEl.addEventListener('click', () => {
@@ -19,3 +24,9 @@ searchIconEl.addEventListener('click', () => {
   }
   console.log(buttonClick);
 });
+
+for (let i = 1; i < 7; i++) {
+  setTimeout(() => {
+    document.querySelector(`.set_0${i}`).style.opacity = '1';
+  }, 400 * i);
+}
