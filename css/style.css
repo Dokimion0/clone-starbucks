@@ -227,7 +227,6 @@ header .badge {
   width: 26%;
   left: 10%;
   top: 34%;
-  opacity: 0;
 }
 
 .visual .visual__image .cup1 {
@@ -236,8 +235,6 @@ header .badge {
   top: 34.5%;
   left: 41.5%;
   width: 22%;
-  opacity: 0;
-  transition: all 0.4s;
 }
 
 .visual .visual__image .cup2 {
@@ -246,8 +243,6 @@ header .badge {
   top: 34.5%;
   right: 19.2%;
   width: 18%;
-  opacity: 0;
-  transition: all 0.4s;
 }
 
 .visual .visual__image .cup3 {
@@ -256,8 +251,6 @@ header .badge {
   top: 15.1%;
   left: 42%;
   width: 19%;
-  opacity: 0;
-  transition: all 0.4s;
 }
 
 .visual .visual__image .cup4 {
@@ -266,8 +259,6 @@ header .badge {
   top: 18%;
   right: 9.4%;
   width: 21%;
-  opacity: 0;
-  transition: all 0.4s;
 }
 
 .visual .btn__slogan {
@@ -275,8 +266,6 @@ header .badge {
   width: 26%;
   left: 10%;
   top: 63.4%;
-  opacity: 0;
-  transition: all 0.4s;
 }
 
 .btn__slogan a {
@@ -293,3 +282,7 @@ header .badge {
   margin: 0 auto;
 }
 
+.set_common {
+  opacity: 0;
+  transition: all 0.4s;
+}
