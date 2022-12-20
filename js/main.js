@@ -25,8 +25,18 @@ searchIconEl.addEventListener('click', () => {
   console.log(buttonClick);
 });
 
-for (let i = 1; i < 7; i++) {
+// 이미지 및 슬로건 애니메이션
+
+// for (let i = 1; i < 7; i++) {
+//   setTimeout(() => {
+//     document.querySelector(`.set_0${i}`).style.opacity = '1';
+//   }, 400 * i);
+// }
+
+const visualEls = document.querySelectorAll('.set_common');
+
+for (let i = 0; i < visualEls.length; i++) {
   setTimeout(() => {
-    document.querySelector(`.set_0${i}`).style.opacity = '1';
-  }, 400 * i);
+    visualEls[i].style.opacity = '1';
+  }, 400 * (i + 1));
 }
