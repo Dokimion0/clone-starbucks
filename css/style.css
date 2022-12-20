@@ -41,6 +41,7 @@ header {
   position: fixed;
   top: 0;
   z-index: 99;
+  border-top: 2px solid #000;
 }
 
 header > .inner {
@@ -203,7 +204,8 @@ header .menu .item .item__contents .contents__menu > ul > li ul li:hover {
 header .badge {
   position: absolute;
   right: 12px;
-  top: 140px;
+  top: 154px;
+  width: 140px;
   cursor: pointer;
 }
 
@@ -285,4 +287,85 @@ header .badge {
 .set_common {
   opacity: 0;
   transition: all 0.4s;
+}
+
+/* NOTICE */
+
+.notice {
+}
+
+.notice .notice__line {
+  position: relative;
+  height: 62px;
+}
+
+.notice__line .line__left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  background: #111;
+  height: 100%;
+}
+
+.notice__line .line__right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  background: #f6f5ef;
+  height: 100%;
+}
+
+.notice__line .inner {
+  display: flex;
+  height: 100%;
+}
+
+.notice__line .inner .inner__left {
+  width: 55%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111;
+  color: #f6f5ef;
+}
+
+.notice .inner .inner__left .swiper {
+  font-size: 13px;
+  flex-grow: 1;
+}
+
+.notice .inner .inner__left span {
+  font-size: 42px;
+  color: #f6f5ef;
+}
+
+.notice__line .inner .inner__right {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #111;
+}
+
+.notice .inner .inner__right span {
+  font-size: 42px;
+  color: #111;
+}
+
+.notice .inner h2 {
+  font-size: var(--font-size-normal);
+  font-weight: 900;
+  margin-right: 20px;
+}
+
+.notice .inner a {
+  width: 62px;
+  height: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
